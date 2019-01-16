@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+.main_screen{
+    background: url(../img/bacground.jpg) no-repeat center top / cover;
+    height: 100vh;
+    width: 100%;	
+}
+
+.conteiner{
+    max-width: 1100px;
+    margin: 0 auto;
+}

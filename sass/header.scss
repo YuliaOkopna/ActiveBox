@@ -1,4 +1,195 @@
-.conteiner{
-    width: 1200px;
-    margin: 0 auto;
+.header_section {
+    header {
+        display: flex;
+        text-align: center;
+        position: relative;
+        padding: 40px 10px;
+        
+        .menu_nav{
+            width: 100%;
+        }
+        
+        .nav_item-1{
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+    
+            &:hover{
+                color: #e84545;
+            }
+        }
+        
+        .logo {
+            p{
+                color: #66697e;
+                font-size: 17px;
+                text-transform: uppercase;
+                display: flex;
+            }
+    
+            span{
+                color: #ffffff;
+            }
+        }
+        
+        .nav_list {
+            display: flex;
+            width: 100%;
+    
+            .nav_item{
+                font-size: 13px; 
+                width: 20%;
+    
+                a{
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    text-decoration: none;
+    
+                    &:hover{
+                        color: #e84545;
+                    }
+                }
+            }
+        }    
+    }
+
+    .line{
+        width: 100%;
+        background:#505369;
+        height: 1px;
+    }
+    
+    .section_screen{
+        padding: 0 20px;
+    }
+
+    .topic{
+        margin-top: 150px;
+        text-align: center;
+    
+        h1{
+            font-size: 65px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+    
+        p{
+            padding-top: 45px;
+            padding-bottom: 80px;
+            font-size: 22px;
+            color: #ffffff;
+        }
+    }
+    
+    .topic_button{
+        background: #e84545;
+        width: 200px;
+        height: 40px;
+        border: 1px #e84545 solid;
+        border-radius: 3px;
+        color: #ffffff;
+        font-size: 13px;
+        text-align: center;
+        cursor: pointer;
+        margin: auto;
+    }
+    
+    .topic_button:hover{
+        color:#505369;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width:976px){
+        
+    .header_section {
+        .topic {
+            h1{
+                font-size: 45px;
+            }
+    
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .header_section {
+
+        header{
+            text-align: right;
+        }
+    
+        .topic {
+            h1{
+                font-size: 38px;
+            }
+    
+            p{
+                font-size: 14px;
+            }
+        }
+    
+        .topic {
+            margin-top: 150px;
+            position: relative;
+        }
+    }
+}
+
+@media screen and (max-width:550px) {
+    .header_section {
+        header {
+            justify-content: space-between;
+
+            .logo p{
+                font-size: 30px;
+            }
+
+            .menu_nav {
+                width: 35px;
+                height: 32px;
+                text-align: center;
+                position: relative;
+
+                &:hover {
+                    .nav_list {
+                        display: block;
+                        position: absolute;
+                        z-index: 1;
+                        right: 0;
+                        top: 100%;
+                        width: auto;
+                    }
+                }
+    
+                .nav_list {
+                    display: none;
+                    text-align: right;
+
+                    .nav_item {
+                        width: 120px;
+                        padding: 3px;
+
+                        a {
+
+                            text-align: right;
+                        }
+                    }
+                }
+    
+                .nav_item-1 {
+                    font-size: 30px;
+                    display: block;
+                }
+            }
+        }
+
+        .line{
+            opacity: 0;
+        }
+    }
 }
