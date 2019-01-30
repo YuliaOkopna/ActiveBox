@@ -1,14 +1,22 @@
 .header_section {
     header {
         display: flex;
-        text-align: center;
         position: relative;
         padding: 40px 10px;
         
         .menu_nav{
             width: 100%;
         }
-        
+
+        .nav_list:after{
+            display: block;
+            content: ' ';
+        }
+
+        .nav_list > li{
+            position: relative;
+        }
+
         .nav_item-1{
             color: white;
             font-size: 20px;
@@ -18,6 +26,29 @@
             &:hover{
                 color: #e84545;
             }
+        }
+
+        ul.subnav_item{
+            display: none;
+            position: absolute;
+            width: 120px;
+            top: 100%;
+            left: 0;
+            li{
+                display: block;
+                a{
+                    display: block;
+                    padding-top: 10px;
+                    
+                        &hover{
+                            text-decoration: underline;
+                        }
+                }
+            }
+        }
+
+        ul.nav_list li:hover ul.subnav_item{
+            display: block;
         }
         
         .logo {
@@ -45,6 +76,7 @@
                     color: #ffffff;
                     text-transform: uppercase;
                     text-decoration: none;
+                    padding-left: 35px;
     
                     &:hover{
                         color: #e84545;
@@ -118,32 +150,46 @@
 
 @media screen and (max-width:768px){
     .header_section {
+        header {
 
-        header{
-            text-align: right;
-        }
-    
-        .topic {
-            h1{
-                font-size: 38px;
+            .topic {
+                h1{
+                    font-size: 38px;
+                }
+        
+                p{
+                    font-size: 14px;
+                }
             }
-    
-            p{
-                font-size: 14px;
+        
+            .topic {
+                margin-top: 150px;
+                position: relative;
             }
-        }
-    
-        .topic {
-            margin-top: 150px;
-            position: relative;
         }
     }
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:650px){
+    .header_section {
+        header{
+            .nav_list {
+                font-size: 10px;
+                .nav_item{ 
+        
+                    a{
+                        padding-left: 5px;
+                    }
+                }
+            }    
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
     .header_section {
         header {
-            justify-content: space-between;
+            justify-content: space-between;  
 
             .logo p{
                 font-size: 30px;

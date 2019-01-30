@@ -68,11 +68,18 @@ article{
     .photo_work{
         width: 100%;
     }
+
 }
 
 @media screen and (max-width:500px){
-    .web_section{
-        width: 50%;
+    article{
+        .web_section{
+            width: 50%;
+            .my_img{
+                width: 47px;
+                height: 83px;
+            }
+        }
     }
 }
 
